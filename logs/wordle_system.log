@@ -102,3 +102,111 @@ INFO: Словарь загружен. Слов для игры: 4143
 INFO: Начата новая игра. Загаданное слово: пахта
 дек. 30, 2025 12:45:17 AM ru.yandex.practicum.Wordle main
 INFO: Игра завершена
+дек. 30, 2025 12:57:34 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 12:57:34 AM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 30, 2025 12:57:34 AM ru.yandex.practicum.Wordle main
+INFO: Загрузка словаря...
+дек. 30, 2025 12:57:34 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Начинаю загрузку словаря из файла: words_ru.txt
+дек. 30, 2025 12:57:34 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Загружено 67774 слов из 67774 строк, пропущено: 0
+дек. 30, 2025 12:57:34 AM ru.yandex.practicum.WordleDictionary <init>
+INFO: Подготовлено 4143 слов длиной 5 букв
+дек. 30, 2025 12:57:34 AM ru.yandex.practicum.Wordle main
+INFO: Словарь загружен. Слов для игры: 4143
+дек. 30, 2025 12:57:34 AM ru.yandex.practicum.WordleGame startNewGame
+INFO: Начата новая игра. Загаданное слово: пивцо
+дек. 30, 2025 12:58:57 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 12:58:57 AM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 30, 2025 12:58:57 AM ru.yandex.practicum.Wordle main
+INFO: Загрузка словаря...
+дек. 30, 2025 12:58:57 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Начинаю загрузку словаря из файла: words_ru.txt
+дек. 30, 2025 12:58:57 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Загружено 67774 слов из 67774 строк, пропущено: 0
+дек. 30, 2025 12:58:57 AM ru.yandex.practicum.WordleDictionary <init>
+INFO: Подготовлено 4143 слов длиной 5 букв
+дек. 30, 2025 12:58:57 AM ru.yandex.practicum.Wordle main
+INFO: Словарь загружен. Слов для игры: 4143
+дек. 30, 2025 12:58:57 AM ru.yandex.practicum.WordleGame startNewGame
+INFO: Начата новая игра. Загаданное слово: камса
+дек. 30, 2025 12:59:24 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 12:59:51 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 12:59:51 AM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 30, 2025 12:59:51 AM ru.yandex.practicum.Wordle main
+INFO: Загрузка словаря...
+дек. 30, 2025 12:59:51 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Начинаю загрузку словаря из файла: words_ru.txt
+дек. 30, 2025 12:59:51 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Загружено 67774 слов из 67774 строк, пропущено: 0
+дек. 30, 2025 12:59:51 AM ru.yandex.practicum.WordleDictionary <init>
+INFO: Подготовлено 4143 слов длиной 5 букв
+дек. 30, 2025 12:59:51 AM ru.yandex.practicum.Wordle main
+INFO: Словарь загружен. Слов для игры: 4143
+дек. 30, 2025 12:59:51 AM ru.yandex.practicum.WordleGame startNewGame
+INFO: Начата новая игра. Загаданное слово: взрез
+дек. 30, 2025 1:03:29 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 1:03:29 AM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 30, 2025 1:03:29 AM ru.yandex.practicum.Wordle main
+INFO: Загрузка словаря...
+дек. 30, 2025 1:03:29 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Начинаю загрузку словаря из файла: words_ru.txt
+дек. 30, 2025 1:03:29 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Загружено 67774 слов из 67774 строк, пропущено: 0
+дек. 30, 2025 1:03:29 AM ru.yandex.practicum.WordleDictionary <init>
+INFO: Подготовлено 4143 слов длиной 5 букв
+дек. 30, 2025 1:03:29 AM ru.yandex.practicum.Wordle main
+INFO: Словарь загружен. Слов для игры: 4143
+дек. 30, 2025 1:03:29 AM ru.yandex.practicum.WordleGame startNewGame
+INFO: Начата новая игра. Загаданное слово: лидер
+дек. 30, 2025 1:04:03 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 1:04:03 AM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 30, 2025 1:04:03 AM ru.yandex.practicum.Wordle main
+INFO: Загрузка словаря...
+дек. 30, 2025 1:04:03 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Начинаю загрузку словаря из файла: words_ru.txt
+дек. 30, 2025 1:04:03 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Загружено 67774 слов из 67774 строк, пропущено: 0
+дек. 30, 2025 1:04:03 AM ru.yandex.practicum.WordleDictionary <init>
+INFO: Подготовлено 4143 слов длиной 5 букв
+дек. 30, 2025 1:04:03 AM ru.yandex.practicum.Wordle main
+INFO: Словарь загружен. Слов для игры: 4143
+дек. 30, 2025 1:04:03 AM ru.yandex.practicum.WordleGame startNewGame
+INFO: Начата новая игра. Загаданное слово: силур
+дек. 30, 2025 1:04:32 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 1:05:10 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 1:06:29 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 1:06:29 AM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 30, 2025 1:06:29 AM ru.yandex.practicum.Wordle main
+INFO: ✋bye bye✋
+дек. 30, 2025 1:07:00 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 1:07:00 AM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 30, 2025 1:07:00 AM ru.yandex.practicum.Wordle main
+INFO: Загрузка словаря...
+дек. 30, 2025 1:07:00 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Начинаю загрузку словаря из файла: words_ru.txt
+дек. 30, 2025 1:07:00 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Загружено 67774 слов из 67774 строк, пропущено: 0
+дек. 30, 2025 1:07:00 AM ru.yandex.practicum.WordleDictionary <init>
+INFO: Подготовлено 4143 слов длиной 5 букв
+дек. 30, 2025 1:07:00 AM ru.yandex.practicum.Wordle main
+INFO: Словарь загружен. Слов для игры: 4143
+дек. 30, 2025 1:07:00 AM ru.yandex.practicum.WordleGame startNewGame
+INFO: Начата новая игра. Загаданное слово: облой

@@ -33,3 +33,27 @@ Tue Dec 30 00:45:04 YEKT 2025 [Game] Попытка 1: вышка -> ✗✗✗�
 Tue Dec 30 00:45:11 YEKT 2025 [Game] Игрок угадал слово: пахта
 Tue Dec 30 00:45:11 YEKT 2025 [Game] Игра завершена победой за 2 попыток
 Tue Dec 30 00:45:17 YEKT 2025 [Game] Игра завершена пользователем
+Tue Dec 30 00:57:34 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: words_ru.txt
+Tue Dec 30 00:57:34 YEKT 2025 [DictionaryLoader] Словарь загружен: 67774 слов
+Tue Dec 30 00:57:34 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 00:57:34 YEKT 2025 [Game] Новая игра. Загаданное слово: пивцо
+Tue Dec 30 00:58:57 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: words_ru.txt
+Tue Dec 30 00:58:57 YEKT 2025 [DictionaryLoader] Словарь загружен: 67774 слов
+Tue Dec 30 00:58:57 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 00:58:57 YEKT 2025 [Game] Новая игра. Загаданное слово: камса
+Tue Dec 30 00:59:51 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: words_ru.txt
+Tue Dec 30 00:59:51 YEKT 2025 [DictionaryLoader] Словарь загружен: 67774 слов
+Tue Dec 30 00:59:51 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 00:59:51 YEKT 2025 [Game] Новая игра. Загаданное слово: взрез
+Tue Dec 30 01:03:29 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: words_ru.txt
+Tue Dec 30 01:03:29 YEKT 2025 [DictionaryLoader] Словарь загружен: 67774 слов
+Tue Dec 30 01:03:29 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:03:29 YEKT 2025 [Game] Новая игра. Загаданное слово: лидер
+Tue Dec 30 01:04:03 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: words_ru.txt
+Tue Dec 30 01:04:03 YEKT 2025 [DictionaryLoader] Словарь загружен: 67774 слов
+Tue Dec 30 01:04:03 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:04:03 YEKT 2025 [Game] Новая игра. Загаданное слово: силур
+Tue Dec 30 01:07:00 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: words_ru.txt
+Tue Dec 30 01:07:00 YEKT 2025 [DictionaryLoader] Словарь загружен: 67774 слов
+Tue Dec 30 01:07:00 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:07:00 YEKT 2025 [Game] Новая игра. Загаданное слово: облой

@@ -16,21 +16,21 @@ public class Wordle {
             setupLogger();
             logger.info("Игра Wordle запускается");
 
-            // Создание загрузчика словарей с передачей лог-файла
+
             WordleDictionaryLoader loader = new WordleDictionaryLoader(logger, gameLogWriter);
 
-            // Загрузка словаря
+
             logger.info("Загрузка словаря...");
             WordleDictionary dictionary = loader.loadDictionary("words_ru.txt");
             logger.info("Словарь загружен. Слов для игры: " + dictionary.getGameWordsCount());
 
-            // Проверка на минимальное количество слов
+
             if (dictionary.getGameWordsCount() < 10) {
                 logger.warning("Мало слов в словаре: " + dictionary.getGameWordsCount());
                 System.out.println("Внимание: в словаре мало слов для интересной игры.");
             }
 
-            // Создание и запуск игры
+
             WordleGame game = new WordleGame(dictionary, logger, gameLogWriter);
             game.play();
 
@@ -40,12 +40,12 @@ public class Wordle {
             System.err.println("Системная ошибка: " + e.getMessage());
             System.err.println("Проверьте наличие файла dictionary.txt и права доступа.");
         } catch (Exception e) {
-            // Все остальные исключения
+
             logger.severe("Критическая ошибка: " + e.getMessage());
             e.printStackTrace();
             System.err.println("Произошла непредвиденная ошибка. Подробности в лог-файлах.");
         } finally {
-            // Гарантированное закрытие ресурсов
+
             closeResources();
             logger.info("✋bye bye✋");
         }
@@ -53,24 +53,24 @@ public class Wordle {
 
     private static void setupLogger() throws IOException {
         try {
-            // Настройка стандартного логгера
+
             Logger rootLogger = Logger.getLogger("");
             for (Handler handler : rootLogger.getHandlers()) {
                 rootLogger.removeHandler(handler);
             }
 
-            // Создаем директорию для логов, если её нет
+
             File logDir = new File("logs");
             if (!logDir.exists() && !logDir.mkdirs()) {
                 throw new IOException("Не удалось создать директорию для логов");
             }
 
-            // Логгер для системных событий
+
             FileHandler fileHandler = new FileHandler("logs/wordle_system.log", true);
             fileHandler.setFormatter(new SimpleFormatter());
             fileHandler.setLevel(Level.ALL);
 
-            // Консольный вывод только для INFO и выше
+
             ConsoleHandler consoleHandler = new ConsoleHandler();
             consoleHandler.setFormatter(new SimpleFormatter() {
                 @Override
