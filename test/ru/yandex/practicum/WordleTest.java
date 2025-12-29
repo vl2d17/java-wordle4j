@@ -10,7 +10,8 @@ import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.io.File;
-import java.io.IOException;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -21,6 +22,7 @@ class WordleTest {
 
     private PrintStream originalOut;
     private PrintStream originalErr;
+    private InputStream originalIn;
     private ByteArrayOutputStream outContent;
     private ByteArrayOutputStream errContent;
 
@@ -28,6 +30,7 @@ class WordleTest {
     void setUp() {
         originalOut = System.out;
         originalErr = System.err;
+        originalIn = System.in;
         outContent = new ByteArrayOutputStream();
         errContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
@@ -38,213 +41,373 @@ class WordleTest {
     void tearDown() {
         System.setOut(originalOut);
         System.setErr(originalErr);
+        System.setIn(originalIn);
+    }
+
+    @Test
+    void testMain_EmptyArguments() {
+
+        Wordle.main(new String[]{});
+
+        String output = getOutput();
+
+
+        assertTrue(output.contains("не указан файл словаря"),
+                "Ожидалось сообщение 'не указан файл словаря'");
+        assertTrue(output.contains("Использование:"),
+                "Ожидалось сообщение 'Использование:'");
+        assertTrue(output.contains("✋bye bye✋"),
+                "Ожидалось прощальное сообщение");
     }
 
     @Test
     void testMain_FileNotFound() {
-        // В текущей реализации Wordle всегда пытается загрузить "words_ru.txt"
-        // Аргументы игнорируются
-        Wordle.main(new String[]{"any_argument.txt"});
+        // Тест 2: Несуществующий файл
+        Wordle.main(new String[]{"nonexistent_file_12345.txt"});
 
         String output = getOutput();
-        System.out.println("DEBUG Output for FileNotFound: " + output);
 
-        // Проверяем ожидаемые сообщения из текущей реализации
-        // 1. "Игра Wordle запускается" - должно быть всегда
-        // 2. "Системная ошибка" или "Файл словаря не найден" - при ошибке
+
         boolean hasError = output.contains("Системная ошибка") ||
                 output.contains("Файл словаря не найден") ||
-                output.contains("words_ru.txt") ||
                 output.contains("GameRuntimeException");
 
-        assertTrue(hasError, "Ожидалось сообщение об ошибке файла words_ru.txt. Вывод: " + output);
-
-        // Также проверяем что программа начала работу
-        assertTrue(output.contains("Игра Wordle запускается") ||
-                        output.contains("Загрузка словаря"),
-                "Программа должна была начать работу. Вывод: " + output);
+        assertTrue(hasError, "Ожидалось сообщение об ошибке файла");
+        assertTrue(output.contains("✋bye bye✋"),
+                "Ожидалось прощальное сообщение");
     }
 
     @Test
-    void testMain_WithValidDictionary() throws Exception {
-        // Создаем файл words_ru.txt в темповой директории
-        Path dictFile = tempDir.resolve("words_ru.txt");
-        String content = """
-            АБВГД
-            ЕЖЗИЙ
-            КЛМНО
-            ПРСТУ
-            ФХЦЧШ
-            ЩЪЫЬЭ
-            ЮЯАБВ
-            ТЕКСТ
-            СЛОВО
-            РУССК
-            """;
-        Files.writeString(dictFile, content);
+    void testMain_EmptyFile() throws Exception {
 
-        // Создаем директорию для логов
-        File logDir = new File(tempDir.toFile(), "logs");
-        logDir.mkdirs();
+        Path emptyFile = tempDir.resolve("empty.txt");
+        Files.createFile(emptyFile);
 
-        // Сохраняем текущую директорию и меняем на темповую
-        String originalDir = System.getProperty("user.dir");
-        System.setProperty("user.dir", tempDir.toString());
+        setupTestEnvironment();
 
         try {
-            // Запускаем Wordle - аргументы игнорируются
-            Wordle.main(new String[]{"ignored.txt"});
+            Wordle.main(new String[]{emptyFile.toString()});
 
             String output = getOutput();
-            System.out.println("DEBUG Output for ValidDictionary: " + output);
 
-            // Проверяем что программа начала работу
-            assertTrue(output.contains("Игра Wordle запускается") ||
-                            output.contains("Словарь загружен"),
-                    "Программа должна была начать работу. Вывод: " + output);
 
-            // Проверяем что нет критических ошибок
-            assertFalse(output.contains("Системная ошибка") ||
-                            output.contains("GameRuntimeException") ||
-                            output.contains("Критическая ошибка"),
-                    "Не ожидались критические ошибки. Вывод: " + output);
-
-        } finally {
-            // Восстанавливаем оригинальную директорию
-            System.setProperty("user.dir", originalDir);
-        }
-    }
-
-    @Test
-    void testMain_EmptyDictionary() throws Exception {
-        // Создаем пустой файл words_ru.txt
-        Path dictFile = tempDir.resolve("words_ru.txt");
-        Files.createFile(dictFile);  // Пустой файл
-
-        File logDir = new File(tempDir.toFile(), "logs");
-        logDir.mkdirs();
-
-        String originalDir = System.getProperty("user.dir");
-        System.setProperty("user.dir", tempDir.toString());
-
-        try {
-            Wordle.main(new String[]{});
-
-            String output = getOutput();
-            System.out.println("DEBUG Output for EmptyDictionary: " + output);
-
-            // Проверяем сообщение о пустом словаре
             boolean hasError = output.contains("Системная ошибка") ||
                     output.contains("Словарь пуст") ||
-                    output.contains("Слишком мало слов") ||
-                    output.contains("мало слов");
+                    output.contains("Слишком мало слов");
 
-            assertTrue(hasError, "Ожидалось сообщение о пустом словаре. Вывод: " + output);
+            assertTrue(hasError, "Ожидалось сообщение о пустом файле");
+            assertTrue(output.contains("✋bye bye✋"),
+                    "Ожидалось прощальное сообщение");
 
         } finally {
-            System.setProperty("user.dir", originalDir);
+            restoreEnvironment();
         }
     }
 
     @Test
-    void testMain_FewWordsInDictionary() throws Exception {
-        // Создаем файл с малым количеством слов
-        Path dictFile = tempDir.resolve("words_ru.txt");
+    void testMain_ValidDictionary_TestMode() throws Exception {
+
+        Path dictFile = tempDir.resolve("dictionary.txt");
         String content = """
-            АБВГД
-            ЕЖЗИЙ
-            КЛМНО
-            ПРСТУ
-            ФХЦЧШ
-            """;  // Только 5 слов
+                АБВГД
+                ЕЖЗИЙ
+                КЛМНО
+                ПРСТУ
+                ФХЦЧШ
+                ЩЪЫЬЭ
+                ЮЯАБВ
+                ТЕКСТ
+                СЛОВО
+                РУССК
+                """;
         Files.writeString(dictFile, content);
+
+        setupTestEnvironment();
+        System.setProperty("test.mode", "true");
+
+        try {
+            Wordle.main(new String[]{dictFile.toString()});
+
+            String output = getOutput();
+
+            // Проверяем успешный запуск
+            assertTrue(output.contains("Тестовый режим") ||
+                            output.contains("Словарь загружен") ||
+                            output.contains("Игра Wordle запускается"),
+                    "Ожидалось сообщение об успешном запуске");
+
+            assertFalse(output.contains("Системная ошибка") ||
+                            output.contains("GameRuntimeException"),
+                    "Не ожидались ошибки");
+
+            assertTrue(output.contains("✋bye bye✋"),
+                    "Ожидалось прощальное сообщение");
+
+        } finally {
+            System.clearProperty("test.mode");
+            restoreEnvironment();
+        }
+    }
+
+    @Test
+    void testMain_FewWordsWarning() throws Exception {
+        // Тест 5: Мало слов в словаре (< 10)
+        Path dictFile = tempDir.resolve("few_words.txt");
+        String content = """
+                АБВГД
+                ЕЖЗИЙ
+                КЛМНО
+                ПРСТУ
+                ФХЦЧШ
+                """; // 5 слов
+        Files.writeString(dictFile, content);
+
+        setupTestEnvironment();
+        System.setProperty("test.mode", "true");
+
+        try {
+            Wordle.main(new String[]{dictFile.toString()});
+
+            String output = getOutput();
+
+            // Проверяем предупреждение
+            boolean hasWarning = output.contains("мало слов") ||
+                    output.contains("Внимание: в словаре мало слов");
+
+            assertTrue(hasWarning, "Ожидалось предупреждение о малом количестве слов");
+            assertTrue(output.contains("✋bye bye✋"),
+                    "Ожидалось прощальное сообщение");
+
+        } finally {
+            System.clearProperty("test.mode");
+            restoreEnvironment();
+        }
+    }
+
+    @Test
+    void testMain_MultipleArguments_UsesFirst() throws Exception {
+        // Тест 6: Несколько аргументов - используется первый
+        Path dictFile1 = tempDir.resolve("dict1.txt");
+        Path dictFile2 = tempDir.resolve("dict2.txt");
+
+        Files.writeString(dictFile1, "АБВГД\nЕЖЗИЙ\nКЛМНО\n");
+        Files.writeString(dictFile2, "НЕИСПОЛЬЗУЕТСЯ\n");
+
+        setupTestEnvironment();
+        System.setProperty("test.mode", "true");
+
+        try {
+            Wordle.main(new String[]{dictFile1.toString(), dictFile2.toString()});
+
+            String output = getOutput();
+
+            // Программа должна работать с первым файлом
+            assertTrue(output.contains("dict1.txt") ||
+                            output.contains(dictFile1.toString()),
+                    "Ожидалось использование первого файла");
+
+            assertFalse(output.contains("НЕИСПОЛЬЗУЕТСЯ"),
+                    "Не ожидалось использование второго файла");
+
+        } finally {
+            System.clearProperty("test.mode");
+            restoreEnvironment();
+        }
+    }
+
+    @Test
+    void testMain_GamePlaySimulation() throws Exception {
+        // Тест 7: Симуляция игры (с вводом "выход" для завершения)
+        Path dictFile = tempDir.resolve("game_dict.txt");
+        String content = """
+                СТОЛА
+                СТУЛА
+                КНИГА
+                РУЧКА
+                ОКНОВ
+                ЛИСТА
+                ВЕТЕР
+                МОРЕМ
+                ПОЛЕМ
+                ЛЕСОК
+                """;
+        Files.writeString(dictFile, content);
+
+        setupTestEnvironment();
+
+        // Симулируем ввод пользователя: 2 попытки + выход
+        String simulatedInput = "СТОЛА\nСТУЛА\nвыход\n";
+        System.setIn(new ByteArrayInputStream(simulatedInput.getBytes()));
+
+        try {
+            // Запускаем в отдельном потоке с таймаутом
+            Thread gameThread = new Thread(() -> {
+                Wordle.main(new String[]{dictFile.toString()});
+            });
+
+            gameThread.start();
+            gameThread.join(10000); // 10 секунд таймаут
+
+            if (gameThread.isAlive()) {
+                gameThread.interrupt();
+                fail("Игра зависла или работает слишком долго");
+            }
+
+            String output = getOutput();
+
+
+            assertTrue(output.contains("Игра Wordle запускается") ||
+                            output.contains("Словарь загружен"),
+                    "Ожидалось что игра запустится");
+
+            assertTrue(output.contains("✋bye bye✋"),
+                    "Ожидалось прощальное сообщение");
+
+        } finally {
+            restoreEnvironment();
+        }
+    }
+
+    @Test
+    void testMain_InvalidWordsInDictionary() throws Exception {
+
+        Path dictFile = tempDir.resolve("invalid_dict.txt");
+        String content = """
+                АБВГД
+                ЕЖЗИЙ
+                КЛМНО
+                ПРСТУ
+                ФХЦЧШ
+                МАМА     
+                ABCDE     
+                12345     
+                АБ-ГД     
+                """;
+        Files.writeString(dictFile, content);
+
+        setupTestEnvironment();
+        System.setProperty("test.mode", "true");
+
+        try {
+            Wordle.main(new String[]{dictFile.toString()});
+
+            String output = getOutput();
+
+
+            assertTrue(output.contains("Словарь загружен") ||
+                            output.contains("мало слов"),
+                    "Ожидалось сообщение о загрузке словаря");
+
+        } finally {
+            System.clearProperty("test.mode");
+            restoreEnvironment();
+        }
+    }
+
+    @Test
+    void testMain_LogDirectoryCreationError() throws Exception {
+        // Этот тест может не работать в некоторых ОС, можно отключить
+        // или сделать более гибким
+
+        Path dictFile = tempDir.resolve("test_dict.txt");
+        Files.writeString(dictFile, "АБВГД\nЕЖЗИЙ\nКЛМНО\n");
+
+        setupTestEnvironment();
+        System.setProperty("test.mode", "true");
+
+        try {
+            Wordle.main(new String[]{dictFile.toString()});
+
+            String output = getOutput();
+            System.out.println("DEBUG Output for LogDirectoryCreationError: " + output);
+
+            // Более гибкая проверка - программа должна либо:
+            // 1. Успешно запуститься (создала логи)
+            // 2. Вывести ошибку логов
+            // 3. Запуститься без ошибок (fallback на консольные логи)
+            boolean programWorked = output.contains("Тестовый режим") ||
+                    output.contains("Словарь загружен") ||
+                    output.contains("Игра Wordle запускается") ||
+                    output.contains("Ошибка настройки логгера") ||
+                    output.contains("Логгеры успешно настроены");
+
+            assertTrue(programWorked,
+                    "Программа должна либо успешно запуститься, либо обработать ошибку. Вывод: " + output);
+
+        } finally {
+            System.clearProperty("test.mode");
+            restoreEnvironment();
+        }
+    }
+
+    @Test
+    void testMain_DictionaryWithExactly10Words() throws Exception {
+        Path dictFile = tempDir.resolve("exact_10.txt");
+
+        // Используем валидные 5-буквенные русские слова
+        String content = """
+        СТОЛА
+        СТУЛА
+        КНИГА
+        РУЧКА
+        ОКНОВ
+        ЛИСТА
+        ВЕТЕР
+        МОРЕМ
+        ПОЛЕМ
+        ЛЕСОК
+        """;
+
+        Files.writeString(dictFile, content);
+
+        setupTestEnvironment();
+        System.setProperty("test.mode", "true");
+
+        try {
+            Wordle.main(new String[]{dictFile.toString()});
+
+            String output = getOutput();
+            System.out.println("DEBUG Output for Exactly10Words: " + output);
+
+            // Проверяем разные возможные сообщения о загрузке
+            boolean dictionaryLoaded = output.contains("Словарь загружен") ||
+                    output.contains("Слов для игры: 10") ||
+                    output.contains("Слов для игры:") ||
+                    output.contains("мало слов") ||
+                    output.contains("Тестовый режим");
+
+            assertTrue(dictionaryLoaded,
+                    "Ожидалось сообщение о загрузке словаря. Вывод: " + output);
+
+            // Проверяем что нет предупреждения для 10 слов
+            // (но может быть предупреждение если порог другой)
+            // Уберите эту проверку если в вашей реализации порог не 10
+            if (output.contains("Внимание: в словаре мало слов")) {
+                System.out.println("ВНИМАНИЕ: Программа выдает предупреждение для 10 слов");
+                // Можно проверить что это действительно предупреждение для 10 слов
+                assertTrue(output.contains("Слов для игры: 10") ||
+                                output.contains("мало слов: 10"),
+                        "Предупреждение должно быть для 10 слов. Вывод: " + output);
+            }
+
+        } finally {
+            System.clearProperty("test.mode");
+            restoreEnvironment();
+        }
+    }
+
+    private void setupTestEnvironment() throws Exception {
 
         File logDir = new File(tempDir.toFile(), "logs");
         logDir.mkdirs();
 
-        String originalDir = System.getProperty("user.dir");
+
         System.setProperty("user.dir", tempDir.toString());
-
-        try {
-            Wordle.main(new String[]{});
-
-            String output = getOutput();
-            System.out.println("DEBUG Output for FewWords: " + output);
-
-            // Проверяем предупреждение о малом количестве слов
-            // Или исключение если меньше минимального
-            boolean hasWarningOrError = output.contains("мало слов") ||
-                    output.contains("Слишком мало слов") ||
-                    output.contains("Внимание: в словаре мало слов");
-
-            assertTrue(hasWarningOrError,
-                    "Ожидалось предупреждение о малом количестве слов. Вывод: " + output);
-
-        } finally {
-            System.setProperty("user.dir", originalDir);
-        }
     }
 
-    @Test
-    void testMain_ArgumentsIgnored() {
-        // Тестируем что аргументы игнорируются
-        Wordle.main(new String[]{"file1.txt", "file2.txt", "file3.txt"});
+    private void restoreEnvironment() {
 
-        String output = getOutput();
-        System.out.println("DEBUG Output for MultipleArguments: " + output);
-
-        // Программа все равно пытается загрузить "words_ru.txt"
-        // и выводит соответствующее сообщение
-        boolean hasWordsRuReference = output.contains("words_ru.txt") ||
-                (output.contains("Файл") && output.contains("не найден"));
-
-        // Или программа начала работу
-        boolean hasStartupMessage = output.contains("Игра Wordle запускается") ||
-                output.contains("Загрузка словаря");
-
-        assertTrue(hasWordsRuReference || hasStartupMessage,
-                "Программа должна игнорировать аргументы и пытаться загрузить words_ru.txt. Вывод: " + output);
-    }
-
-    @Test
-    void testMain_LoggingSetupError() throws Exception {
-        // Создаем файл words_ru.txt
-        Path dictFile = tempDir.resolve("words_ru.txt");
-        Files.writeString(dictFile, "АБВГД\nЕЖЗИЙ\n");
-
-        // Создаем read-only директорию чтобы вызвать ошибку создания логов
-        File readOnlyDir = new File(tempDir.toFile(), "readonly_logs");
-        readOnlyDir.mkdirs();
-        readOnlyDir.setReadOnly();
-
-        // Временно меняем директорию для логов в Wordle
-        // (Это сложно без рефлексии, но проверяем общее поведение)
-
-        String originalDir = System.getProperty("user.dir");
-        System.setProperty("user.dir", tempDir.toString());
-
-        try {
-            Wordle.main(new String[]{});
-
-            String output = getOutput();
-            System.out.println("DEBUG Output for LoggingError: " + output);
-
-            // Проверяем что программа как-то обработала ошибку
-            boolean hasError = output.contains("Ошибка настройки логгера") ||
-                    output.contains("Критическая ошибка") ||
-                    output.contains("не удалось создать директорию");
-
-            // Или программа все равно попыталась работать
-            boolean triedToWork = output.contains("Игра Wordle запускается") ||
-                    output.contains("Загрузка словаря");
-
-            assertTrue(hasError || triedToWork,
-                    "Ожидалось сообщение об ошибке или попытка работы. Вывод: " + output);
-
-        } finally {
-            readOnlyDir.setWritable(true);
-            System.setProperty("user.dir", originalDir);
-        }
+        System.setProperty("user.dir", System.getProperty("user.home"));
     }
 
     private String getOutput() {

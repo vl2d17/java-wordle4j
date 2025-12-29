@@ -57,3 +57,83 @@ Tue Dec 30 01:07:00 YEKT 2025 [DictionaryLoader] Загрузка словаря
 Tue Dec 30 01:07:00 YEKT 2025 [DictionaryLoader] Словарь загружен: 67774 слов
 Tue Dec 30 01:07:00 YEKT 2025 [Game] Создан новый экземпляр игры
 Tue Dec 30 01:07:00 YEKT 2025 [Game] Новая игра. Загаданное слово: облой
+Tue Dec 30 01:34:04 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: dictionary.txt
+Tue Dec 30 01:34:04 YEKT 2025 [DictionaryLoader] ОШИБКА: Файл словаря не найден: dictionary.txt
+Tue Dec 30 01:35:23 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: words_ru.txt
+Tue Dec 30 01:35:23 YEKT 2025 [DictionaryLoader] Словарь загружен: 67774 слов
+Tue Dec 30 01:35:23 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:35:23 YEKT 2025 [Game] Новая игра. Загаданное слово: телек
+Tue Dec 30 01:35:41 YEKT 2025 [Game] Ошибка ввода: Слово 'клатч' не найдено в словаре
+Tue Dec 30 01:35:47 YEKT 2025 [Game] Ошибка ввода: Слово 'моник' не найдено в словаре
+Tue Dec 30 01:35:55 YEKT 2025 [Game] Игрок угадал слово: телек
+Tue Dec 30 01:35:55 YEKT 2025 [Game] Игра завершена победой за 1 попыток
+Tue Dec 30 01:35:59 YEKT 2025 [Game] Игра завершена пользователем
+Tue Dec 30 01:36:50 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: words_ru.txt
+Tue Dec 30 01:36:50 YEKT 2025 [DictionaryLoader] Словарь загружен: 67774 слов
+Tue Dec 30 01:36:50 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:36:50 YEKT 2025 [Game] Новая игра. Загаданное слово: сопор
+Tue Dec 30 01:36:57 YEKT 2025 [Game] Игрок угадал слово: сопор
+Tue Dec 30 01:36:57 YEKT 2025 [Game] Игра завершена победой за 1 попыток
+Tue Dec 30 01:36:59 YEKT 2025 [Game] Игра завершена пользователем
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit8824684300376325535\dict1.txt
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Словарь загружен: 3 слов
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Предупреждение: мало слов в словаре: 3
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: nonexistent_file_12345.txt
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] ОШИБКА: Файл словаря не найден: nonexistent_file_12345.txt
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit6581151516168824043\game_dict.txt
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Словарь загружен: 10 слов
+Tue Dec 30 01:43:20 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:43:20 YEKT 2025 [Game] Новая игра. Загаданное слово: книга
+Tue Dec 30 01:43:20 YEKT 2025 [Game] Попытка 1: СТОЛА -> ✗✗✗✗✓ (осталось попыток: 6)
+Tue Dec 30 01:43:20 YEKT 2025 [Game] Попытка 2: СТУЛА -> ✗✗✗✗✓ (осталось попыток: 5)
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit4444628131808460937\few_words.txt
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Словарь загружен: 5 слов
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Предупреждение: мало слов в словаре: 5
+Tue Dec 30 01:43:20 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit15526200327511542364\dictionary.txt
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Словарь загружен: 10 слов
+Tue Dec 30 01:43:20 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit5190080678582283784\empty.txt
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Словарь загружен: 0 слов
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] ОШИБКА: Словарь пуст
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit1829665215222954674\invalid_dict.txt
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Словарь загружен: 9 слов
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Предупреждение: мало слов в словаре: 9
+Tue Dec 30 01:43:20 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit6412814809271916075\test_dict.txt
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Словарь загружен: 3 слов
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Предупреждение: мало слов в словаре: 3
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit239095083069952637\exact_10.txt
+Tue Dec 30 01:43:20 YEKT 2025 [DictionaryLoader] Словарь загружен: 10 слов
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit3513854953104022920\dict1.txt
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Словарь загружен: 3 слов
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Предупреждение: мало слов в словаре: 3
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: nonexistent_file_12345.txt
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] ОШИБКА: Файл словаря не найден: nonexistent_file_12345.txt
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit9452261251556672066\game_dict.txt
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Словарь загружен: 10 слов
+Tue Dec 30 01:45:13 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:45:13 YEKT 2025 [Game] Новая игра. Загаданное слово: стола
+Tue Dec 30 01:45:13 YEKT 2025 [Game] Игрок угадал слово: СТОЛА
+Tue Dec 30 01:45:13 YEKT 2025 [Game] Игра завершена победой за 1 попыток
+Tue Dec 30 01:45:13 YEKT 2025 [Game] Игра завершена пользователем
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit18403940257999892488\few_words.txt
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Словарь загружен: 5 слов
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Предупреждение: мало слов в словаре: 5
+Tue Dec 30 01:45:13 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit12129744063003059558\dictionary.txt
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Словарь загружен: 10 слов
+Tue Dec 30 01:45:13 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit6767857797985833190\empty.txt
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Словарь загружен: 0 слов
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] ОШИБКА: Словарь пуст
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit1704417411216980352\invalid_dict.txt
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Словарь загружен: 9 слов
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Предупреждение: мало слов в словаре: 9
+Tue Dec 30 01:45:13 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit18191836528704637885\test_dict.txt
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Словарь загружен: 3 слов
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Предупреждение: мало слов в словаре: 3
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: C:\Users\madGamer\AppData\Local\Temp\junit748480797257366490\exact_10.txt
+Tue Dec 30 01:45:13 YEKT 2025 [DictionaryLoader] Словарь загружен: 10 слов
+Tue Dec 30 01:45:13 YEKT 2025 [Game] Создан новый экземпляр игры
