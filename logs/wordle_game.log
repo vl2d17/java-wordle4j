@@ -1,0 +1,35 @@
+Mon Dec 29 23:21:29 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: dictionary.txt
+Mon Dec 29 23:21:29 YEKT 2025 [DictionaryLoader] ОШИБКА: Файл словаря не найден: dictionary.txt
+Mon Dec 29 23:22:27 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: dictionary.txt
+Mon Dec 29 23:22:27 YEKT 2025 [DictionaryLoader] ОШИБКА: Файл словаря не найден: dictionary.txt
+Mon Dec 29 23:25:58 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: words_ru.txt
+Mon Dec 29 23:25:58 YEKT 2025 [DictionaryLoader] ОШИБКА: Файл словаря не найден: words_ru.txt
+Mon Dec 29 23:26:26 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: words_ru.txt
+Mon Dec 29 23:26:26 YEKT 2025 [DictionaryLoader] Словарь загружен: 67774 слов
+Mon Dec 29 23:26:26 YEKT 2025 [Game] Создан новый экземпляр игры
+Mon Dec 29 23:26:26 YEKT 2025 [Game] Новая игра. Загаданное слово: липси
+Mon Dec 29 23:26:44 YEKT 2025 [Game] Ошибка ввода: Слово должно содержать ровно 5 букв
+Mon Dec 29 23:27:22 YEKT 2025 [Game] Попытка 1: гусак -> ✗✗~✗✗ (осталось попыток: 6)
+Mon Dec 29 23:27:27 YEKT 2025 [Game] Ошибка ввода: Слово должно содержать только русские буквы
+Mon Dec 29 23:27:29 YEKT 2025 [Game] Ошибка ввода: Слово должно содержать ровно 5 букв
+Mon Dec 29 23:27:31 YEKT 2025 [Game] Ошибка ввода: Слово должно содержать ровно 5 букв
+Mon Dec 29 23:27:35 YEKT 2025 [Game] Ошибка ввода: Слово должно содержать ровно 5 букв
+Mon Dec 29 23:27:53 YEKT 2025 [Game] Игрок угадал слово: липси
+Mon Dec 29 23:27:53 YEKT 2025 [Game] Игра завершена победой за 2 попыток
+Mon Dec 29 23:27:57 YEKT 2025 [Game] Игра завершена пользователем
+Mon Dec 29 23:31:29 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: words_ru.txt
+Mon Dec 29 23:31:29 YEKT 2025 [DictionaryLoader] Словарь загружен: 67774 слов
+Mon Dec 29 23:31:29 YEKT 2025 [Game] Создан новый экземпляр игры
+Mon Dec 29 23:31:29 YEKT 2025 [Game] Новая игра. Загаданное слово: казак
+Mon Dec 29 23:31:42 YEKT 2025 [Game] Игрок угадал слово: казак
+Mon Dec 29 23:31:42 YEKT 2025 [Game] Игра завершена победой за 1 попыток
+Mon Dec 29 23:31:46 YEKT 2025 [Game] Игра завершена пользователем
+Tue Dec 30 00:44:41 YEKT 2025 [DictionaryLoader] Загрузка словаря из файла: words_ru.txt
+Tue Dec 30 00:44:41 YEKT 2025 [DictionaryLoader] Словарь загружен: 67774 слов
+Tue Dec 30 00:44:41 YEKT 2025 [Game] Создан новый экземпляр игры
+Tue Dec 30 00:44:41 YEKT 2025 [Game] Новая игра. Загаданное слово: пахта
+Tue Dec 30 00:44:52 YEKT 2025 [Game] Ошибка ввода: Слово 'лахта' не найдено в словаре
+Tue Dec 30 00:45:04 YEKT 2025 [Game] Попытка 1: вышка -> ✗✗✗✗✓ (осталось попыток: 6)
+Tue Dec 30 00:45:11 YEKT 2025 [Game] Игрок угадал слово: пахта
+Tue Dec 30 00:45:11 YEKT 2025 [Game] Игра завершена победой за 2 попыток
+Tue Dec 30 00:45:17 YEKT 2025 [Game] Игра завершена пользователем

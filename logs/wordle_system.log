@@ -1,0 +1,104 @@
+дек. 29, 2025 11:21:29 PM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 29, 2025 11:21:29 PM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 29, 2025 11:21:29 PM ru.yandex.practicum.Wordle main
+INFO: Загрузка словаря...
+дек. 29, 2025 11:21:29 PM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Начинаю загрузку словаря из файла: dictionary.txt
+дек. 29, 2025 11:21:29 PM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+SEVERE: Файл словаря не найден: dictionary.txt
+дек. 29, 2025 11:21:29 PM ru.yandex.practicum.Wordle main
+SEVERE: Системная ошибка игры: Файл словаря не найден: dictionary.txt
+дек. 29, 2025 11:21:29 PM ru.yandex.practicum.Wordle main
+INFO: Игра завершена
+дек. 29, 2025 11:22:27 PM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 29, 2025 11:22:27 PM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 29, 2025 11:22:27 PM ru.yandex.practicum.Wordle main
+INFO: Загрузка словаря...
+дек. 29, 2025 11:22:27 PM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Начинаю загрузку словаря из файла: dictionary.txt
+дек. 29, 2025 11:22:27 PM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+SEVERE: Файл словаря не найден: dictionary.txt
+дек. 29, 2025 11:22:27 PM ru.yandex.practicum.Wordle main
+SEVERE: Системная ошибка игры: Файл словаря не найден: dictionary.txt
+дек. 29, 2025 11:22:27 PM ru.yandex.practicum.Wordle main
+INFO: Игра завершена
+дек. 29, 2025 11:25:58 PM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 29, 2025 11:25:58 PM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 29, 2025 11:25:58 PM ru.yandex.practicum.Wordle main
+INFO: Загрузка словаря...
+дек. 29, 2025 11:25:58 PM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Начинаю загрузку словаря из файла: words_ru.txt
+дек. 29, 2025 11:25:58 PM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+SEVERE: Файл словаря не найден: words_ru.txt
+дек. 29, 2025 11:25:58 PM ru.yandex.practicum.Wordle main
+SEVERE: Системная ошибка игры: Файл словаря не найден: words_ru.txt
+дек. 29, 2025 11:25:58 PM ru.yandex.practicum.Wordle main
+INFO: Игра завершена
+дек. 29, 2025 11:26:26 PM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 29, 2025 11:26:26 PM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 29, 2025 11:26:26 PM ru.yandex.practicum.Wordle main
+INFO: Загрузка словаря...
+дек. 29, 2025 11:26:26 PM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Начинаю загрузку словаря из файла: words_ru.txt
+дек. 29, 2025 11:26:26 PM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Загружено 67774 слов из 67774 строк, пропущено: 0
+дек. 29, 2025 11:26:26 PM ru.yandex.practicum.WordleDictionary <init>
+INFO: Подготовлено 4143 слов длиной 5 букв
+дек. 29, 2025 11:26:26 PM ru.yandex.practicum.Wordle main
+INFO: Словарь загружен. Слов для игры: 4143
+дек. 29, 2025 11:26:26 PM ru.yandex.practicum.WordleGame startNewGame
+INFO: Начата новая игра. Загаданное слово: липси
+дек. 29, 2025 11:27:57 PM ru.yandex.practicum.Wordle main
+INFO: Игра завершена
+дек. 29, 2025 11:31:29 PM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 29, 2025 11:31:29 PM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 29, 2025 11:31:29 PM ru.yandex.practicum.Wordle main
+INFO: Загрузка словаря...
+дек. 29, 2025 11:31:29 PM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Начинаю загрузку словаря из файла: words_ru.txt
+дек. 29, 2025 11:31:29 PM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Загружено 67774 слов из 67774 строк, пропущено: 0
+дек. 29, 2025 11:31:29 PM ru.yandex.practicum.WordleDictionary <init>
+INFO: Подготовлено 4143 слов длиной 5 букв
+дек. 29, 2025 11:31:29 PM ru.yandex.practicum.Wordle main
+INFO: Словарь загружен. Слов для игры: 4143
+дек. 29, 2025 11:31:29 PM ru.yandex.practicum.WordleGame startNewGame
+INFO: Начата новая игра. Загаданное слово: казак
+дек. 29, 2025 11:31:46 PM ru.yandex.practicum.Wordle main
+INFO: Игра завершена
+дек. 29, 2025 11:37:55 PM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 12:06:03 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 12:25:53 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 12:39:07 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 12:44:41 AM ru.yandex.practicum.Wordle setupLogger
+INFO: Логгеры успешно настроены
+дек. 30, 2025 12:44:41 AM ru.yandex.practicum.Wordle main
+INFO: Игра Wordle запускается
+дек. 30, 2025 12:44:41 AM ru.yandex.practicum.Wordle main
+INFO: Загрузка словаря...
+дек. 30, 2025 12:44:41 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Начинаю загрузку словаря из файла: words_ru.txt
+дек. 30, 2025 12:44:41 AM ru.yandex.practicum.WordleDictionaryLoader loadDictionary
+INFO: Загружено 67774 слов из 67774 строк, пропущено: 0
+дек. 30, 2025 12:44:41 AM ru.yandex.practicum.WordleDictionary <init>
+INFO: Подготовлено 4143 слов длиной 5 букв
+дек. 30, 2025 12:44:41 AM ru.yandex.practicum.Wordle main
+INFO: Словарь загружен. Слов для игры: 4143
+дек. 30, 2025 12:44:41 AM ru.yandex.practicum.WordleGame startNewGame
+INFO: Начата новая игра. Загаданное слово: пахта
+дек. 30, 2025 12:45:17 AM ru.yandex.practicum.Wordle main
+INFO: Игра завершена
